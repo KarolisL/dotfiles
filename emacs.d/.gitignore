@@ -1,0 +1,11 @@
+url/
+elpa/
+eshell/
+games/
+semanticdb/
+ac-comphist.dat
+.emacs.desktop
+nrepl-history
+projectile-bookmarks.eld
+projectile.cache
+*.elc
