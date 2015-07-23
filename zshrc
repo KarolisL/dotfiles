@@ -1,0 +1,78 @@
+# load zgen
+source "${HOME}/dev/dotfiles/zgen/zgen.zsh"
+
+# check if there's no init script
+if ! zgen saved; then
+    echo "Creating a zgen save"
+
+    zgen oh-my-zsh
+
+    # plugins
+    zgen oh-my-zsh plugins/git
+    zgen oh-my-zsh plugins/git-extras
+    zgen oh-my-zsh plugins/sudo
+    zgen oh-my-zsh plugins/command-not-found
+    zgen load zsh-users/zsh-syntax-highlighting
+    zgen load marzocchi/zsh-notify
+    zgen load sorin-ionescu/prezto modules/git/alias.zsh
+    zgen load lesaint/lesaint-mvn
+
+    # completions
+    zgen load zsh-users/zsh-completions src
+    zgen load akoenig/gulp-autocompletion-zsh
+
+    # theme
+    zgen load sindresorhus/pure 
+    #zgen load eproxus/pad.zsh-theme pad.zsh-theme 
+    #zgen load fdv/platypus platypus.zsh-theme
+    #zgen oh-my-zsh themes/arrow
+    #zgen oh-my-zsh themes/peepcode
+
+    # Git
+    zgen load djui/alias-tips
+
+    zgen load RobSis/zsh-completion-generator
+
+    # save all to init script
+    zgen save
+fi
+
+
+## Exports
+export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
+export M2_HOME="/usr/share/maven/"
+
+export EDITOR="vim"
+
+source ~/bin/Apps/z/z.sh
+
+source ~/.bash_aliases
+
+
+expand-aliases() {
+    unset 'functions[_expand-aliases]'
+    functions[_expand-aliases]=$BUFFER
+    (($+functions[_expand-aliases])) &&
+        BUFFER=${functions[_expand-aliases]#$'\t'} &&
+        CURSOR=$#BUFFER
+}
+
+zle -N expand-aliases
+bindkey '\e^E' expand-aliases
+
+# Disable shared history
+unsetopt share_history
+
+
+#### Custom Fn
+function stopwatch() {
+date1=`date +%s`; 
+while true; do 
+    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
+    sleep 0.1
+done
+}
+
+### OpenShift
+export KUBERNETES_DOMAIN=vagrant.f8
+export DOCKER_HOST=tcp://vagrant.f8:2375
