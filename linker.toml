@@ -1,0 +1,12 @@
+[tasks.default]
+    links = [
+        [".tmux.conf", "tmux.conf"],
+        [".tmux", "tmux"],
+        [".tmuxinator", "tmuxinator"],
+        [".zshrc", "zshrc"],
+        [".vimrc", "vimrc"],
+        [".vim", "vim"],
+        [".byobu", "byobu"],
+    ]
+
+
