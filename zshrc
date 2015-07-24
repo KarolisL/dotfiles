@@ -40,8 +40,11 @@ if ! zgen saved; then
     zgen save
 fi
 
-## Add gnue coreutils
+# Add gnue coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+# Add postgresql
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+
 
 ## Exports
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
