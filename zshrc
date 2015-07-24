@@ -12,6 +12,8 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/git-extras
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/command-not-found
+    zgen oh-my-zsh plugins/brew
+    zgen oh-my-zsh plugins/gnu-utils
     zgen load zsh-users/zsh-syntax-highlighting
 #    zgen load marzocchi/zsh-notify
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
@@ -39,7 +41,7 @@ if ! zgen saved; then
 fi
 
 ## Add gnue coreutils
-#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 ## Exports
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
@@ -89,3 +91,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 bindkey -e
 bindkey '^[[1;9C' forward-word
 bindkey '^[[1;9D' backward-word
+
+##### Aliases #######
+alias ls="ls --color=auto"
