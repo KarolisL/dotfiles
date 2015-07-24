@@ -47,6 +47,7 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 #export M2_HOME="/usr/share/maven/"
 #export M2_HOME="/usr/local/Cellar/maven/3.3.3"
+export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
 
 
