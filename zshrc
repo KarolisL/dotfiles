@@ -13,7 +13,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/command-not-found
     zgen load zsh-users/zsh-syntax-highlighting
-    zgen load marzocchi/zsh-notify
+#    zgen load marzocchi/zsh-notify
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
     zgen load lesaint/lesaint-mvn
 
@@ -22,31 +22,37 @@ if ! zgen saved; then
     zgen load akoenig/gulp-autocompletion-zsh
 
     # theme
-    zgen load sindresorhus/pure 
-    #zgen load eproxus/pad.zsh-theme pad.zsh-theme 
+    #zgen load sindresorhus/pure 
     #zgen load fdv/platypus platypus.zsh-theme
-    #zgen oh-my-zsh themes/arrow
+#    zgen oh-my-zsh themes/arrow
     #zgen oh-my-zsh themes/peepcode
+    #zgen oh-my-zsh themes/blinks
+    zgen oh-my-zsh themes/mortalscumbag
 
     # Git
     zgen load djui/alias-tips
 
-    zgen load RobSis/zsh-completion-generator
+#    zgen load RobSis/zsh-completion-generator
 
     # save all to init script
     zgen save
 fi
 
+## Add gnue coreutils
+#export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 
 ## Exports
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
-export M2_HOME="/usr/share/maven/"
+#export M2_HOME="/usr/share/maven/"
+#export M2_HOME="/usr/local/Cellar/maven/3.3.3"
+export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
+
 
 export EDITOR="vim"
 
 source ~/bin/Apps/z/z.sh
 
-source ~/.bash_aliases
+#source ~/.bash_aliases
 
 
 expand-aliases() {
@@ -74,5 +80,12 @@ done
 }
 
 ### OpenShift
-export KUBERNETES_DOMAIN=vagrant.f8
-export DOCKER_HOST=tcp://vagrant.f8:2375
+#export KUBERNETES_DOMAIN=vagrant.f8
+#export DOCKER_HOST=tcp://vagrant.f8:2375
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# forward/backward
+bindkey -e
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
