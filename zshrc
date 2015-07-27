@@ -44,6 +44,8 @@ fi
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 # Add postgresql
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.4/bin
+# Home/bin
+export PATH="$PATH:$HOME/bin"
 
 
 ## Exports
@@ -52,6 +54,7 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 #export M2_HOME="/usr/local/Cellar/maven/3.3.3"
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
+export BYOBU_PREFIX=$(brew --prefix)
 
 
 export EDITOR="vim"
@@ -93,8 +96,11 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # forward/backward
 bindkey -e
-bindkey '^[[1;9C' forward-word
-bindkey '^[[1;9D' backward-word
+bindkey '^[^[[D' forward-word
+bindkey '^[^[[C' backward-word
+#bindkey '^[[1;9C' forward-word
+#bindkey '^[[1;9D' backward-word
 
 ##### Aliases #######
 alias ls="ls --color=auto"
+
