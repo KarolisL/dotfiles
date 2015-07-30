@@ -52,7 +52,7 @@ export PATH="$PATH:$HOME/bin"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 #export M2_HOME="/usr/share/maven/"
 #export M2_HOME="/usr/local/Cellar/maven/3.3.3"
-export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
+#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
 export BYOBU_PREFIX=$(brew --prefix)
 
@@ -103,4 +103,6 @@ bindkey '^[^[[C' backward-word
 
 ##### Aliases #######
 alias ls="ls --color=auto"
-
+alias kget="kubectl get"
+alias ksget="kubectl get --namespace=kube-system"
+alias ksc="kubectl --namespace=kube-system"
