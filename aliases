@@ -5,3 +5,7 @@ alias kget="kubectl get"
 alias kc="kubectl"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
+
+
+# vim: ft=zsh
+
