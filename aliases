@@ -1,4 +1,5 @@
 alias rel_aliases="source ~/.aliases"
+alias rel_conf="source ~/.zshrc"
 alias ls="ls --color=auto"
 alias kget="kubectl get"
 alias kc="kubectl"

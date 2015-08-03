@@ -29,7 +29,8 @@ if ! zgen saved; then
     # Git
     zgen load djui/alias-tips
 
-    zgen load RobSis/zsh-completion-generator
+    zgen load RobSis/zsh-completion-generator zsh-completion-generator.plugin.zsh
+    compinit
 
     # save all to init script
     zgen save
@@ -54,7 +55,9 @@ export EDITOR="vim"
 ### Includes
 source ~/bin/Apps/z/z.sh
 source ~/.aliases
-source ${HOME}/dev/dotfiles/sudo.zsh
+for f in ${HOME}/dev/dotfiles/shell-extra/*; do
+    source "$f"
+done
 
 # Disable shared history
 unsetopt share_history
