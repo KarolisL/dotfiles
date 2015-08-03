@@ -4,6 +4,7 @@
         [".tmux", "tmux"],
         [".tmuxinator", "tmuxinator"],
         [".zshrc", "zshrc"],
+        [".aliases", "aliases"],
         [".vimrc", "vimrc"],
         [".vim", "vim"],
         [".byobu", "byobu"],

@@ -49,7 +49,9 @@ export BYOBU_PREFIX=$(brew --prefix)
 
 export EDITOR="vim"
 
+### Includes
 source ~/bin/Apps/z/z.sh
+source ~/.aliases
 
 # Disable shared history
 unsetopt share_history
@@ -60,10 +62,3 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 bindkey -e
 bindkey '^[^[[D' forward-word
 bindkey '^[^[[C' backward-word
-
-##### Aliases #######
-alias ls="ls --color=auto"
-alias kget="kubectl get"
-alias kc="kubectl"
-alias ksget="kubectl get --namespace=kube-system"
-alias ksc="kubectl --namespace=kube-system"
