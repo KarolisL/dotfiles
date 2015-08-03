@@ -100,5 +100,6 @@ bindkey '^[^[[C' backward-word
 ##### Aliases #######
 alias ls="ls --color=auto"
 alias kget="kubectl get"
+alias kc="kubectl"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
