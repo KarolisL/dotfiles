@@ -1,6 +1,8 @@
 # load zgen
 source "${HOME}/dev/dotfiles/zgen/zgen.zsh"
 
+source "${HOME}/dev/dotfiles/sudo.zsh"
+
 # check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -10,12 +12,10 @@ if ! zgen saved; then
     # plugins
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/git-extras
-    zgen oh-my-zsh plugins/sudo
     zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/gnu-utils
     zgen load zsh-users/zsh-syntax-highlighting
-#    zgen load marzocchi/zsh-notify
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
     zgen load lesaint/lesaint-mvn
 
@@ -24,11 +24,6 @@ if ! zgen saved; then
     zgen load akoenig/gulp-autocompletion-zsh
 
     # theme
-    #zgen load sindresorhus/pure 
-    #zgen load fdv/platypus platypus.zsh-theme
-#    zgen oh-my-zsh themes/arrow
-    #zgen oh-my-zsh themes/peepcode
-    #zgen oh-my-zsh themes/blinks
     zgen oh-my-zsh themes/mortalscumbag
 
     # Git
@@ -87,6 +82,7 @@ while true; do
     sleep 0.1
 done
 }
+
 
 ### OpenShift
 #export KUBERNETES_DOMAIN=vagrant.f8
