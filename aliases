@@ -1,4 +1,4 @@
-
+alias rel_aliases="source ~/.aliases"
 alias ls="ls --color=auto"
 alias kget="kubectl get"
 alias kc="kubectl"
