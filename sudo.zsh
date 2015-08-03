@@ -9,4 +9,3 @@ zle -N prepend-sudo
 
 # Insert 'sudo ' at the beginning of the line.
 bindkey -M "emacs" "\C-X\C-S" prepend-sudo
-bindkey -M "emacs" "C-A" beginning-of-line
