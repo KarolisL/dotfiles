@@ -52,6 +52,7 @@ export EDITOR="vim"
 ### Includes
 source ~/bin/Apps/z/z.sh
 source ~/.aliases
+source ${HOME}/dev/dotfiles/keyboard.zsh
 
 # Disable shared history
 unsetopt share_history
@@ -62,3 +63,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 bindkey -e
 bindkey '^[^[[D' forward-word
 bindkey '^[^[[C' backward-word
+
+
+
