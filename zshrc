@@ -1,8 +1,6 @@
 # load zgen
 source "${HOME}/dev/dotfiles/zgen/zgen.zsh"
 
-source "${HOME}/dev/dotfiles/sudo.zsh"
-
 # check if there's no init script
 if ! zgen saved; then
     echo "Creating a zgen save"
@@ -29,7 +27,7 @@ if ! zgen saved; then
     # Git
     zgen load djui/alias-tips
 
-#    zgen load RobSis/zsh-completion-generator
+    zgen load RobSis/zsh-completion-generator
 
     # save all to init script
     zgen save
@@ -45,9 +43,6 @@ export PATH="$PATH:$HOME/bin"
 
 ## Exports
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
-#export M2_HOME="/usr/share/maven/"
-#export M2_HOME="/usr/local/Cellar/maven/3.3.3"
-#export JAVA_HOME="/Library/Java/JavaVirtualMachines/jdk1.7.0_80.jdk/Contents/Home"
 export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
 export BYOBU_PREFIX=$(brew --prefix)
 
@@ -56,37 +51,8 @@ export EDITOR="vim"
 
 source ~/bin/Apps/z/z.sh
 
-#source ~/.bash_aliases
-
-
-expand-aliases() {
-    unset 'functions[_expand-aliases]'
-    functions[_expand-aliases]=$BUFFER
-    (($+functions[_expand-aliases])) &&
-        BUFFER=${functions[_expand-aliases]#$'\t'} &&
-        CURSOR=$#BUFFER
-}
-
-zle -N expand-aliases
-bindkey '\e^E' expand-aliases
-
 # Disable shared history
 unsetopt share_history
-
-
-#### Custom Fn
-function stopwatch() {
-date1=`date +%s`; 
-while true; do 
-    echo -ne "$(date -u --date @$((`date +%s` - $date1)) +%H:%M:%S)\r"; 
-    sleep 0.1
-done
-}
-
-
-### OpenShift
-#export KUBERNETES_DOMAIN=vagrant.f8
-#export DOCKER_HOST=tcp://vagrant.f8:2375
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
@@ -94,8 +60,6 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 bindkey -e
 bindkey '^[^[[D' forward-word
 bindkey '^[^[[C' backward-word
-#bindkey '^[[1;9C' forward-word
-#bindkey '^[[1;9D' backward-word
 
 ##### Aliases #######
 alias ls="ls --color=auto"
