@@ -1,5 +1,11 @@
+## Management
 alias rel_aliases="source ~/.aliases"
 alias rel_conf="source ~/.zshrc"
+alias _vimzsh="vim ~/.zshrc"
+alias _vimalias="vim ~/.aliases"
+
+
+
 alias ls="ls --color=auto"
 alias kget="kubectl get"
 alias kc="kubectl"
