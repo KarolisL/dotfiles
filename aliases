@@ -12,6 +12,8 @@ alias kc="kubectl"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
 
+alias mvn="mvn-color"
+
 
 # vim: ft=zsh
 
