@@ -49,6 +49,7 @@ export PATH="$PATH:$HOME/bin"
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
 export BYOBU_PREFIX=$(brew --prefix)
+export GROOVY_HOME=/usr/local/opt/groovy/libexec
 
 
 export EDITOR="vim"
