@@ -7,12 +7,19 @@ alias _vimalias="vim ~/.aliases"
 
 
 alias ls="ls --color=auto"
+
+##### Kubernetes
 alias kget="kubectl get"
 alias kc="kubectl"
+alias kcc="kubectl create"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
+#####
 
 alias mvn="mvn-color"
+
+# Boot2Docker
+alias b2d='eval "$(boot2docker shellinit)"'
 
 
 # vim: ft=zsh
