@@ -18,6 +18,7 @@ alias ksc="kubectl --namespace=kube-system"
 #####
 
 alias mvn="mvn-color"
+alias gw="./gradlew"
 
 # Boot2Docker
 alias b2d='eval "$(boot2docker shellinit)"'
