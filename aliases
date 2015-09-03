@@ -21,7 +21,7 @@ alias mvn="mvn-color"
 alias gw="./gradlew"
 
 # Boot2Docker
-alias b2d='eval "$(boot2docker shellinit)"'
+alias b2d='eval "$(docker-machine env default)"'
 
 
 # vim: ft=zsh
