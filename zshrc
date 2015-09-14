@@ -16,6 +16,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/tmuxinator
     zgen oh-my-zsh plugins/boot2docker
     zgen oh-my-zsh plugins/mvn
+    zgen oh-my-zsh plugins/gradle
 
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
