@@ -4,6 +4,8 @@ alias rel_conf="source ~/.zshrc"
 alias _vimzsh="vim ~/.zshrc"
 alias _vimalias="vim ~/.aliases"
 
+alias _getauth="source ~/.auths"
+
 
 
 alias ls="ls --color=auto"
