@@ -19,3 +19,5 @@ set modelines=5
 
 " Highlight search
 set hls
+
+set t_Co=256
