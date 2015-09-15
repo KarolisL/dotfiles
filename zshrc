@@ -17,6 +17,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/boot2docker
     zgen oh-my-zsh plugins/mvn
     zgen oh-my-zsh plugins/gradle
+    zgen oh-my-zsh plugins/ssh-agent
 
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
@@ -51,9 +52,13 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
 export BYOBU_PREFIX=$(brew --prefix)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
+export JAVA_CMD=$(which drip)
 
 
 export EDITOR="vim"
+
+
+zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 ### Includes
 source ~/bin/Apps/z/z.sh
@@ -72,3 +77,5 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 #bindkey '^[^[[D' forward-word
 #bindkey '^[^[[C' backward-word
 
+
+test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
