@@ -17,6 +17,8 @@ alias kcc="kubectl create"
 alias kcd="kubectl describe"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
+
+alias ksctx='kubectl config set current-context'
 #####
 
 alias mvn="mvn-color"

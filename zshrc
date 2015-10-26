@@ -53,6 +53,7 @@ export M2_HOME=/usr/local/Cellar/maven/3.3.3/libexec/
 export BYOBU_PREFIX=$(brew --prefix)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export JAVA_CMD=$(which drip)
+export JAVACMD=$(which drip)
 
 
 export EDITOR="vim"
