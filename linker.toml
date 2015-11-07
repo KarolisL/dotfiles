@@ -8,6 +8,7 @@
         [".vimrc", "vimrc"],
         [".vim", "vim"],
         [".byobu", "byobu"],
+        ["bin", "bin"],
     ]
 
 
