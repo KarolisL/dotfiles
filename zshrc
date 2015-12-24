@@ -18,6 +18,7 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/mvn
     zgen oh-my-zsh plugins/gradle
     zgen oh-my-zsh plugins/ssh-agent
+    zgen oh-my-zsh plugins/aws
 
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
