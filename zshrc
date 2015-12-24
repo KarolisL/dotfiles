@@ -63,7 +63,7 @@ export EDITOR="vim"
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 ### Includes
-#source ~/bin/Apps/z/z.sh
+source ~/bin/z.sh # Enable 'z'
 source ~/.aliases
 for f in ${HOME}/dev/dotfiles/shell-extra/*; do
     source "$f"
