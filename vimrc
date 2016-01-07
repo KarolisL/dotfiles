@@ -21,3 +21,10 @@ set modelines=5
 set hls
 
 set t_Co=256
+
+" Highlight begining whitespace
+highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
+match LiteralTabs /\s\  /
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
+match ExtraWhitespace /\s\+$/
