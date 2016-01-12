@@ -55,6 +55,9 @@ export BYOBU_PREFIX=$(brew --prefix)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 export JAVA_CMD=$(which drip)
 export JAVACMD=$(which drip)
+export GPG_TTY=`tty`
+
+export LC_ALL="en_US.UTF-8"
 
 
 export EDITOR="vim"
