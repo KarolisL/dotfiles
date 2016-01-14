@@ -28,3 +28,7 @@ match LiteralTabs /\s\  /
 " Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
+
+" Use OSX system clipboard
+set clipboard=unnamed
+
