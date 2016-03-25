@@ -27,6 +27,9 @@ alias gw="./gradlew"
 # Boot2Docker
 alias b2d='eval "$(docker-machine env default)"'
 
+# SSH
+alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
+
 
 # vim: ft=zsh
 
