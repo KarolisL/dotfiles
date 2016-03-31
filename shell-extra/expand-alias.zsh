@@ -7,4 +7,4 @@ expand-aliases() {
 }
 
 zle -N expand-aliases
-bindkey '\e^E' expand-aliases
+bindkey '^ ' expand-aliases
