@@ -30,6 +30,19 @@ alias b2d='eval "$(docker-machine env default)"'
 # SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
+function awsenv() {
+    ENV=$1
+    eval $(aws-env-update.py -x -e $ENV)
+
+    export AWS_ACCESS_KEY="$AWS_ACCESS_KEY_ID"
+    export AWS_SECRET_KEY="$AWS_SECRET_ACCESS_KEY"
+
+    if [ $ENV = "test" ]; then
+        export TF_VAR_GLOBAL_AWS_ACCESS_KEY_ID="$AWS_ACCESS_KEY_ID"
+        export TF_VAR_GLOBAL_AWS_SECRET_ACCESS_KEY="$AWS_SECRET_ACCESS_KEY"
+    fi
+}
+
 
 # vim: ft=zsh
 
