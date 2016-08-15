@@ -54,8 +54,8 @@ export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec/
 export BYOBU_PREFIX=$(brew --prefix)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-export JAVA_CMD=$(which drip)
-export JAVACMD=$(which drip)
+#export JAVA_CMD=$(which drip)
+#export JAVACMD=$(which drip)
 export GPG_TTY=`tty`
 
 export LC_ALL="en_US.UTF-8"
