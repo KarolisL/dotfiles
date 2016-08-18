@@ -88,3 +88,6 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 
 # Rbenv
 eval "$(rbenv init -)"
+
+# Kubectl
+source <(kubectl completion zsh)
