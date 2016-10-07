@@ -15,11 +15,13 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/gnu-utils
     zgen oh-my-zsh plugins/tmuxinator
     zgen oh-my-zsh plugins/boot2docker
+    zgen oh-my-zsh plugins/docker
     zgen oh-my-zsh plugins/mvn
     zgen oh-my-zsh plugins/gradle
     zgen oh-my-zsh plugins/ssh-agent
     zgen oh-my-zsh plugins/aws
     zgen oh-my-zsh plugins/gpg-agent
+    zgen oh-my-zsh plugins/terraform
 
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
@@ -89,5 +91,3 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 # Rbenv
 eval "$(rbenv init -)"
 
-# Kubectl
-source <(kubectl completion zsh)

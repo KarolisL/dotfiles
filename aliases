@@ -11,6 +11,7 @@ alias _getauth="source ~/.auths"
 alias ls="ls --color=auto"
 
 ##### Kubernetes
+alias kube-load-compl="source <(kubectl completion zsh)"
 alias kget="kubectl get"
 alias kc="kubectl"
 alias kcc="kubectl create"
