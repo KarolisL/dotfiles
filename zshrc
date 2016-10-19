@@ -91,3 +91,7 @@ test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_in
 # Rbenv
 eval "$(rbenv init -)"
 
+# Golang
+export GOPATH=$HOME/golang
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:$GOROOT/bin
