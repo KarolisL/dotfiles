@@ -33,7 +33,7 @@ alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=
 
 function awsenv() {
     ENV=$1
-    eval $(aws-env-update.py -x -e $ENV)
+    eval $(aws-env-update.py -a -x -e $ENV)
 
     export AWS_ACCESS_KEY="$AWS_ACCESS_KEY_ID"
     export AWS_SECRET_KEY="$AWS_SECRET_ACCESS_KEY"
