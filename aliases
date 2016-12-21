@@ -1,3 +1,5 @@
+# vim: ft=zsh
+
 ## Management
 alias rel_aliases="source ~/.aliases"
 alias rel_conf="source ~/.zshrc"
@@ -23,14 +25,19 @@ alias ksctx='kubectl config set current-context'
 #####
 
 alias mvn="mvn-color"
-alias gw="./gradlew"
-
-# Boot2Docker
-alias b2d='eval "$(docker-machine env default)"'
 
 # SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
+### SFR
+
+# Pass
+function pass4idrsa() {
+    local env=$1
+    pass ck/keys/${env}_id_rsa_internal/pass | pbcopy
+}
+
+# AWS
 function awsenv() {
     ENV=$1
     eval $(aws-env-update.py -a -x -e $ENV)
@@ -45,5 +52,4 @@ function awsenv() {
 }
 
 
-# vim: ft=zsh
 
