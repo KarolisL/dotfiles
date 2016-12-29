@@ -33,7 +33,7 @@ if ! zgen saved; then
     zgen load akoenig/gulp-autocompletion-zsh
 
     # theme
-    zgen oh-my-zsh themes/sunrise
+    zgen load denysdovhan/spaceship-zsh-theme spaceship
 
     # Git
     zgen load djui/alias-tips
@@ -44,6 +44,12 @@ if ! zgen saved; then
     # save all to init script
     zgen save
 fi
+
+## Spaceship theme
+SPACESHIP_NVM_SHOW=false
+SPACESHIP_RUBY_SHOW=false
+# Number of folders to truncate of cwd (0=disabled)
+SPACESHIP_PROMPT_TRUNC=0
 
 # Add gnue coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
