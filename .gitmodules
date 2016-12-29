@@ -1,3 +1,6 @@
 [submodule "mac-cli"]
 	path = mac-cli
 	url = git@github.com:guarinogabriel/mac-cli.git
+[submodule "zgen"]
+	path = zgen
+	url = git@github.com:tarjoilija/zgen.git
