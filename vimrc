@@ -1,4 +1,4 @@
-set background=dark
+set background=light
 set mouse=a
 
 filetype plugin indent on     " Required!
