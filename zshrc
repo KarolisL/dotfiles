@@ -57,6 +57,8 @@ export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 # Home/bin
 export PATH="$PATH:$HOME/bin"
+# Save history after command rather than after shell exit
+setopt INC_APPEND_HISTORY
 
 
 ## Exports
