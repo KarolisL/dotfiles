@@ -1,5 +1,5 @@
 # load zgen
-source "${HOME}/dev/dotfiles/zgen/zgen.zsh"
+source "${HOME}/.zgen-src/zgen.zsh"
 
 # check if there's no init script
 if ! zgen saved; then

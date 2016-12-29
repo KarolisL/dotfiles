@@ -1,13 +1,11 @@
 [tasks.default]
     links = [
-        [".tmux.conf", "tmux.conf"],
-        [".tmux", "tmux"],
-        [".tmuxinator", "tmuxinator"],
         [".zshrc", "zshrc"],
         [".aliases", "aliases"],
         [".vimrc", "vimrc"],
         [".vim", "vim"],
         [".byobu", "byobu"],
+        [".zgen-src", "zgen"],
         ["bin", "bin"],
     ]
 
