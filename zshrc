@@ -33,8 +33,10 @@ if ! zgen saved; then
     zgen load akoenig/gulp-autocompletion-zsh
 
     # theme
-    zgen oh-my-zsh themes/mortalscumbag
+    zgen oh-my-zsh themes/sunrise
+    
 
+    
     # Git
     zgen load djui/alias-tips
 
