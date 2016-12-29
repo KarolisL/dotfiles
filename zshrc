@@ -34,9 +34,7 @@ if ! zgen saved; then
 
     # theme
     zgen oh-my-zsh themes/sunrise
-    
 
-    
     # Git
     zgen load djui/alias-tips
 
