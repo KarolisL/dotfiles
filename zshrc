@@ -82,7 +82,10 @@ export EDITOR="vim"
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
 ### Includes
-source ~/bin/z.sh # Enable 'z'
+# Load autojump
+[ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
+# Load 'z'
+source ~/bin/z.sh 
 source ~/.aliases
 for f in ${HOME}/dev/dotfiles/shell-extra/*; do
     source "$f"
