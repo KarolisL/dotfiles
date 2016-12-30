@@ -48,8 +48,11 @@ fi
 ## Spaceship theme
 SPACESHIP_NVM_SHOW=false
 SPACESHIP_RUBY_SHOW=false
+SPACESHIP_VENV_SHOW=false
+SPACESHIP_VI_MODE_SHOW=true
 # Number of folders to truncate of cwd (0=disabled)
 SPACESHIP_PROMPT_TRUNC=0
+SPACESHIP_PROMPT_SYMBOL="$"
 
 # Add gnue coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
