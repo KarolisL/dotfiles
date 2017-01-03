@@ -30,6 +30,7 @@ alias mvn="mvn-color"
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 ### SFR
+alias ssh-puppet-pf="ssh -R 8140:localhost:8140"
 
 # Pass
 function pass4idrsa() {
@@ -45,6 +46,5 @@ function awsenv() {
     export AWS_ACCESS_KEY="$AWS_ACCESS_KEY_ID"
     export AWS_SECRET_KEY="$AWS_SECRET_ACCESS_KEY"
 }
-
 
 
