@@ -11,6 +11,7 @@ call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
 "   }}}
+
 "   {{{ Plugin list 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
@@ -19,6 +20,7 @@ Plugin 'gnupg.vim'
 Plugin 'vim-powerline'
 Plugin 'scrooloose/nerdtree'
 "   }}}
+
 "   {{{ Examples of loading plugins 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -37,10 +39,12 @@ Plugin 'scrooloose/nerdtree'
 " different version somewhere else.
 "Plugin 'ascenator/L9', {'name': 'newL9'}
 "   }}}
+
 "   {{{ All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
 "   }}}
+
 "   {{{ Brief help
 " :PluginList       - lists configured plugins
 " :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
@@ -58,11 +62,16 @@ set mouse=a
 
 filetype plugin indent on     " Required!
 set autoindent
-" make backspace work like most other apps
+
+"   {{{ make backspace work like most other apps
 set backspace=2
+"   }}}
+
+"   {{{ Tabs
 set tabstop=4
 set shiftwidth=4
 set expandtab
+"   }}}
 set laststatus=2
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
