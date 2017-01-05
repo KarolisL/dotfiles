@@ -19,7 +19,6 @@ if ! zgen saved; then
     zgen oh-my-zsh plugins/docker-compose
     zgen oh-my-zsh plugins/mvn
     zgen oh-my-zsh plugins/gradle
-    zgen oh-my-zsh plugins/ssh-agent
     zgen oh-my-zsh plugins/aws
     zgen oh-my-zsh plugins/gpg-agent
     zgen oh-my-zsh plugins/terraform
@@ -67,7 +66,6 @@ setopt INC_APPEND_HISTORY
 ## Exports
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
 export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec/
-export BYOBU_PREFIX=$(brew --prefix)
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
 #export JAVA_CMD=$(which drip)
 #export JAVACMD=$(which drip)
