@@ -26,6 +26,9 @@ alias ksctx='kubectl config set current-context'
 
 alias mvn="mvn-color"
 
+# Raspberry
+alias ssh2pi="ssh 192.168.0.2 -L 9001:localhost:9001"
+
 # SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
