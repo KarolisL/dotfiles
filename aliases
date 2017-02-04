@@ -38,7 +38,8 @@ alias ssh-puppet-pf="ssh -R 8140:localhost:8140"
 # Pass
 function pass4idrsa() {
     local env=$1
-    pass ck/keys/${env}_id_rsa_internal/pass | pbcopy
+    local t=${2:-internal}
+    pass "ck/keys/${env}_id_rsa_${t}/pass" | pbcopy
 }
 
 # AWS
