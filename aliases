@@ -52,3 +52,8 @@ function awsenv() {
 }
 
 
+
+alias tf-nr-plan="terraform plan -refresh=false"
+alias tf-nr-apply="terraform apply -refresh=false"
+alias tf-nrp-plan="terraform plan -out plan.txt -refresh=false"
+alias tf-nrp-apply="terraform apply -refresh=false plan.txt "
