@@ -117,3 +117,15 @@ autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 map <C-n> :NERDTreeToggle<CR>
 "   }}}
 " }}}
+" {{{ Dealing with splits
+"   {{{ Keybindings
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+"   }}}
+"   {{{ More natural split opening - Open new split panes to right and bottom, which feels more natural than Vim’s default
+set splitbelow
+set splitright
+"   }}}
+" }}}
