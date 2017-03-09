@@ -12,6 +12,9 @@ alias _getauth="source ~/.auths"
 
 alias ls="ls --color=auto"
 
+##### Git
+alias gcs='git commit --verbose -S'
+
 ##### Kubernetes
 alias kube-load-compl="source <(kubectl completion zsh)"
 alias kget="kubectl get"
