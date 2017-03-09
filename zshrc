@@ -113,3 +113,5 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 # added by travis gem
 [ -f /Users/karolis/.travis/travis.sh ] && source /Users/karolis/.travis/travis.sh
 
+# awless completion
+source <(awless completion zsh)
