@@ -40,8 +40,10 @@ alias ssh-puppet-pf="ssh -R 8140:localhost:8140"
 function gneis-ssh() {
     # Usage: gneis-ssh test rabbitmq01a
     local env=$1
-    local host=$2
-    ssh "${env}-${host}.${env}.gneis.io"
+    shift
+    local host=$1
+    shift
+    ssh "${env}-${host}.${env}.gneis.io" $@
 }
 
 # Pass
