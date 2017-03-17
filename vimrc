@@ -57,7 +57,7 @@ filetype plugin indent on    " required
 " }}}
 
 " {{{ General settings
-set background=light
+set background=dark
 set mouse=a
 
 filetype plugin indent on     " Required!
