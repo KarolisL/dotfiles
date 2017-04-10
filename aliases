@@ -36,6 +36,7 @@ alias ssh2pi="ssh 192.168.0.2 -L 9001:localhost:9001"
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
 
 ### SFR
+alias aws-roll-keys='aws-roll-keys.py -e all -a -i awskeys@acteurope.onmicrosoft.com'
 alias ssh-puppet-pf="ssh -R 8140:localhost:8140"
 function gneis-ssh() {
     # Usage: gneis-ssh test rabbitmq01a
@@ -68,6 +69,7 @@ function awsenv() {
     export AWS_ACCESS_KEY="$AWS_ACCESS_KEY_ID"
     export AWS_SECRET_KEY="$AWS_SECRET_ACCESS_KEY"
 }
+
 
 
 
