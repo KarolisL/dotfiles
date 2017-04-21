@@ -45,7 +45,7 @@ function gneis-ssh() {
     local host=$1
     shift
     local should_pf=$1
-    if [ $should_pf = "pf" ]; then
+    if [ "$should_pf" = "pf" ]; then
         local pf="-R 8140:localhost:8140"
         shift
     else
