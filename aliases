@@ -87,7 +87,16 @@ function awsenv() {
 
 
 
-
+# Terraform
+function tf() {
+    if [ $# -lt 1 ]; then
+        "Usage: $0 <version> [..args]"
+        return 1
+    fi
+    version="$1"
+    shift
+    /usr/local/Cellar/terraform/${version}/bin/terraform $@
+}
 alias tf-nr-plan="terraform plan -refresh=false"
 alias tf-nr-apply="terraform apply -refresh=false"
 alias tf-nrp-plan="terraform plan -out plan.txt -refresh=false"
