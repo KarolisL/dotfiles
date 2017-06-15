@@ -102,3 +102,5 @@ alias tf-nr-plan="terraform plan -refresh=false"
 alias tf-nr-apply="terraform apply -refresh=false"
 alias tf-nrp-plan="terraform plan -out plan.txt -refresh=false"
 alias tf-nrp-apply="terraform apply -refresh=false plan.txt "
+
+alias osx-docker-shell="screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty"
