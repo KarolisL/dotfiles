@@ -30,6 +30,7 @@ if ! zgen saved; then
     # completions
     zgen load zsh-users/zsh-completions src
     zgen load akoenig/gulp-autocompletion-zsh
+    zgen load littleq0903/gcloud-zsh-completion src
 
     # theme
     zgen load denysdovhan/spaceship-zsh-theme spaceship
@@ -43,6 +44,7 @@ if ! zgen saved; then
     # save all to init script
     zgen save
 fi
+
 
 ## Spaceship theme
 SPACESHIP_NVM_SHOW=false
