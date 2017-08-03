@@ -30,11 +30,21 @@ alias kget="kubectl get"
 alias kc="kubectl"
 alias kcc="kubectl create"
 alias kca="kubectl apply"
+alias kcaf="kubectl apply --filename"
 alias kcd="kubectl describe"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
 
+alias kcpf="kubectl port-forward"
+alias kcl="kubectl logs"
+alias kce="kubectl exec"
+alias kclf="kubectl logs -f"
+
 alias ksctx='kubectl config set current-context'
+alias kctx='kubectx'
+
+alias k-get-img="kubectl get pods -o template --template '{{index .spec \"containers\" 0 \"image\"}}'"
+
 #####
 
 alias mvn="mvn-color"
