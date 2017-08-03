@@ -19,6 +19,10 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'gnupg.vim'
 Plugin 'vim-powerline'
 Plugin 'scrooloose/nerdtree'
+Plugin 'fatih/vim-go'
+
+
+Plugin 'kien/ctrlp.vim' " Navigate/find files/buffers, etc
 "   }}}
 
 "   {{{ Examples of loading plugins 
