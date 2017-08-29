@@ -32,8 +32,10 @@ alias kcc="kubectl create"
 alias kca="kubectl apply"
 alias kcaf="kubectl apply --filename"
 alias kcd="kubectl describe"
+alias kcrm="kubectl delete"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
+
 
 alias kcpf="kubectl port-forward"
 alias kcl="kubectl logs"
