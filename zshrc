@@ -20,15 +20,15 @@ if ! zgen saved; then
     #zgen oh-my-zsh plugins/mvn
     #zgen oh-my-zsh plugins/gradle
     zgen oh-my-zsh plugins/aws
-    zgen oh-my-zsh plugins/gpg-agent
-    zgen oh-my-zsh plugins/terraform
+    #zgen oh-my-zsh plugins/gpg-agent
+    #zgen oh-my-zsh plugins/terraform
 
 
     zgen load zsh-users/zsh-syntax-highlighting
     zgen load sorin-ionescu/prezto modules/git/alias.zsh
 
     # completions
-    zgen load zsh-users/zsh-completions src
+    #zgen load zsh-users/zsh-completions src
     zgen load littleq0903/gcloud-zsh-completion src
 
     # theme
@@ -37,7 +37,7 @@ if ! zgen saved; then
     # Git
     zgen load djui/alias-tips
 
-    compinit
+    #compinit
 
     # save all to init script
     zgen save
@@ -79,8 +79,7 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 ### Includes
 # Load autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
-# Load 'z'
-source ~/bin/z.sh
+
 source ~/.aliases
 for f in ${HOME}/dev/dotfiles/shell-extra/*; do
     source "$f"
@@ -98,7 +97,7 @@ unsetopt share_history
 test -e ${HOME}/.iterm2_shell_integration.zsh && source ${HOME}/.iterm2_shell_integration.zsh
 
 # Rbenv
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 # Golang
 export GOPATH=$HOME/golang
