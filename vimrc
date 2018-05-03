@@ -2,6 +2,7 @@
 " Install plugins with vim +PluginInstall +qal
 "
 
+
 " {{{ Vundle (plugins)
 " required for vundle
 filetype off
@@ -133,3 +134,6 @@ set splitbelow
 set splitright
 "   }}}
 " }}}
+"
+
+set nocompatible

@@ -33,6 +33,7 @@ alias kca="kubectl apply"
 alias kcaf="kubectl apply --filename"
 alias kcd="kubectl describe"
 alias kcrm="kubectl delete"
+alias kcdel="kubectl delete"
 alias ksget="kubectl get --namespace=kube-system"
 alias ksc="kubectl --namespace=kube-system"
 
@@ -45,7 +46,6 @@ alias kclf="kubectl logs -f"
 alias ksctx='kubectl config set current-context'
 alias kctx='kubectx'
 
-alias k-get-img="kubectl get pods -o template --template '{{index .spec \"containers\" 0 \"image\"}}'"
 
 #####
 
@@ -89,12 +89,12 @@ function add-gneis-key() {
     local key_path="$HOME/.ssh/$env-$type"
 
     local phrase=$(pass "ck/keys/${env}_id_rsa_${type}/pass")
-    echo $phrase
 
     expect <<EOF
-        spawn ssh-add "$key_path"
+        spawn ssh-add $key_path
         expect "Enter passphrase for $key_path:"
-        send "my_pass"
+        send "$phrase\r"
+        interact
 EOF
 }
 
@@ -127,3 +127,8 @@ alias tf-nrp-apply="terraform apply -refresh=false plan.txt "
 alias osx-docker-shell="screen ~/Library/Containers/com.docker.docker/Data/com.docker.driver.amd64-linux/tty"
 
 alias ec='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+
+
+### Global
+alias -g AWK_FIRST="| awk '{print \$1}'"
+

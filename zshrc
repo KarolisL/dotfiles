@@ -10,15 +10,15 @@ if ! zgen saved; then
     # plugins
     zgen oh-my-zsh plugins/git
     zgen oh-my-zsh plugins/git-extras
-    zgen oh-my-zsh plugins/command-not-found
+    #zgen oh-my-zsh plugins/command-not-found
     zgen oh-my-zsh plugins/brew
     zgen oh-my-zsh plugins/gnu-utils
-    zgen oh-my-zsh plugins/tmuxinator
-    zgen oh-my-zsh plugins/boot2docker
+    #zgen oh-my-zsh plugins/tmuxinator
+    #zgen oh-my-zsh plugins/boot2docker
     zgen oh-my-zsh plugins/docker
     zgen oh-my-zsh plugins/docker-compose
-    zgen oh-my-zsh plugins/mvn
-    zgen oh-my-zsh plugins/gradle
+    #zgen oh-my-zsh plugins/mvn
+    #zgen oh-my-zsh plugins/gradle
     zgen oh-my-zsh plugins/aws
     zgen oh-my-zsh plugins/gpg-agent
     zgen oh-my-zsh plugins/terraform
@@ -38,7 +38,7 @@ if ! zgen saved; then
     # Git
     zgen load djui/alias-tips
 
-    zgen load RobSis/zsh-completion-generator zsh-completion-generator.plugin.zsh
+    #zgen load RobSis/zsh-completion-generator zsh-completion-generator.plugin.zsh
     compinit
 
     # save all to init script
@@ -112,8 +112,17 @@ export GOPATH=$HOME/golang
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
+# Python
+## Homebrew python should come before system python
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+
 # added by travis gem
-[ -f /Users/karolis/.travis/travis.sh ] && source /Users/karolis/.travis/travis.sh
+#[ -f /Users/karolis/.travis/travis.sh ] && source /Users/karolis/.travis/travis.sh
 
 # awless completion
 source <(awless completion zsh)
+
+### Added by the Bluemix CLI
+source /usr/local/Bluemix/bx/zsh_autocomplete
+
+function jt { ruby /Users/karolis/dev/truffleruby-ws/truffleruby//tool/jt.rb "$@"; }
