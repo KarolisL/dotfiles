@@ -29,7 +29,6 @@ if ! zgen saved; then
 
     # completions
     zgen load zsh-users/zsh-completions src
-    zgen load akoenig/gulp-autocompletion-zsh
     zgen load littleq0903/gcloud-zsh-completion src
 
     # theme
@@ -38,7 +37,6 @@ if ! zgen saved; then
     # Git
     zgen load djui/alias-tips
 
-    #zgen load RobSis/zsh-completion-generator zsh-completion-generator.plugin.zsh
     compinit
 
     # save all to init script
@@ -67,10 +65,7 @@ setopt INC_APPEND_HISTORY
 
 ## Exports
 export ZSH_PLUGINS_ALIAS_TIPS_TEXT="Alias tip: "
-export M2_HOME=/usr/local/Cellar/maven/3.3.9/libexec/
 export GROOVY_HOME=/usr/local/opt/groovy/libexec
-#export JAVA_CMD=$(which drip)
-#export JAVACMD=$(which drip)
 export GPG_TTY=`tty`
 
 export LC_ALL="en_US.UTF-8"
@@ -85,7 +80,7 @@ zstyle :omz:plugins:ssh-agent agent-forwarding on
 # Load autojump
 [ -f /usr/local/etc/profile.d/autojump.sh ] && . /usr/local/etc/profile.d/autojump.sh
 # Load 'z'
-source ~/bin/z.sh 
+source ~/bin/z.sh
 source ~/.aliases
 for f in ${HOME}/dev/dotfiles/shell-extra/*; do
     source "$f"
@@ -93,8 +88,6 @@ done
 
 # Disable shared history
 unsetopt share_history
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # forward/backward
 #bindkey -e
@@ -116,13 +109,3 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 ## Homebrew python should come before system python
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 
-# added by travis gem
-#[ -f /Users/karolis/.travis/travis.sh ] && source /Users/karolis/.travis/travis.sh
-
-# awless completion
-source <(awless completion zsh)
-
-### Added by the Bluemix CLI
-source /usr/local/Bluemix/bx/zsh_autocomplete
-
-function jt { ruby /Users/karolis/dev/truffleruby-ws/truffleruby//tool/jt.rb "$@"; }
