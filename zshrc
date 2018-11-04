@@ -1,5 +1,5 @@
 # load zgen
-source "${HOME}/.zgen-src/zgen.zsh"
+source "${HOME}/.zgen/zgen.zsh"
 
 # check if there's no init script
 if ! zgen saved; then
@@ -45,16 +45,19 @@ fi
 
 
 ## Spaceship theme
-SPACESHIP_NVM_SHOW=false
-SPACESHIP_RUBY_SHOW=false
-SPACESHIP_VENV_SHOW=false
-SPACESHIP_VI_MODE_SHOW=true
+export SPACESHIP_NVM_SHOW=false
+export SPACESHIP_NODE_SHOW=false
+export SPACESHIP_RUBY_SHOW=false
+export SPACESHIP_VENV_SHOW=false
+export SPACESHIP_DIR_TRUNC_REPO=false
+export SPACESHIP_PACKAGE_SHOW=false
+export SPACESHIP_VI_MODE_SHOW=true
 # Number of folders to truncate of cwd (0=disabled)
-SPACESHIP_PROMPT_TRUNC=0
-SPACESHIP_PROMPT_SYMBOL="$"
+export SPACESHIP_PROMPT_TRUNC=0
 
 # Add gnue coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:$MANPATH"
 # Add postgresql
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 # Home/bin
