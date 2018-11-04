@@ -113,6 +113,12 @@ vnoremap <Space> zf
 "   }}}
 " }}}
 
+" {{{ Reopen file on the same position
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+" }}}
+
 " {{{ Nnerd tree
 "   {{{ start nerd tree if no files are open
 autocmd StdinReadPre * let s:std_in=1
@@ -134,6 +140,5 @@ set splitbelow
 set splitright
 "   }}}
 " }}}
-"
 
 set nocompatible
