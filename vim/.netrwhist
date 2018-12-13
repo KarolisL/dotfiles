@@ -1,4 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_cnt =3
 let g:netrw_dirhist_1='/Users/karolis/dev/statoil/ansible/playbooks/roles/ck-jenkins/tasks'
 let g:netrw_dirhist_2='/Users/karolis/dev/statoil/gpe-terraform-admin-vpc/core_modules/component_elasticsearch_plain'
+let g:netrw_dirhist_3='/Users/karolis/dev/statoil/gpe-deploy-gdpr/core_modules'

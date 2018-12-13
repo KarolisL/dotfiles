@@ -16,4 +16,8 @@
     "workbench.editor.labelFormat": "medium",
     "editor.codeLens": false,
     "eslint.autoFixOnSave": true,
+    "circleci.apiKey": "67fd495affce16e2d210e455f27884a0e01a2ce5",
+    "rest-client.previewOption": "exchange",
+    "tslint.autoFixOnSave": true,
+    "tslint.packageManager": "yarn",
 }
