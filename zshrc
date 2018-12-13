@@ -30,6 +30,7 @@ if ! zgen saved; then
     # completions
     #zgen load zsh-users/zsh-completions src
     zgen load littleq0903/gcloud-zsh-completion src
+    zgen load zx2c4/password-store src/completion/pass.zsh-completion
 
     # theme
     zgen load denysdovhan/spaceship-zsh-theme spaceship
