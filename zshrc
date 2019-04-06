@@ -53,8 +53,9 @@ export SPACESHIP_VENV_SHOW=false
 export SPACESHIP_DIR_TRUNC_REPO=false
 export SPACESHIP_PACKAGE_SHOW=false
 export SPACESHIP_VI_MODE_SHOW=true
+export SPACESHIP_DOCKER_SHOW=false
 # Number of folders to truncate of cwd (0=disabled)
-export SPACESHIP_PROMPT_TRUNC=0
+export SPACESHIP_DIR_TRUNC=0
 
 # Add gnue coreutils
 export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH"
