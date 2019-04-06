@@ -48,55 +48,8 @@ alias kctx='kubectx'
 
 
 #####
-
-alias mvn="mvn-color"
-
-# Raspberry
-alias ssh2pi="ssh 192.168.0.2 -L 9001:localhost:9001"
-
 # SSH
 alias ssh-nocheck='ssh -o UserKnownHostsFile=/dev/null -o StrictHostKeyChecking=no'
-
-### SFR
-alias aws-roll-keys='aws-roll-keys.py -e all -a -i awskeys@acteurope.onmicrosoft.com,karolis@inventi.lt'
-alias ssh-puppet-pf="ssh -R 8140:localhost:8140"
-function gneis-ssh() {
-    # Usage: gneis-ssh test rabbitmq01a
-    local env=$1
-    shift
-    local host=$1
-    shift
-    local should_pf=$1
-    if [ "$should_pf" = "pf" ]; then
-        local pf="-R 8140:localhost:8140"
-        shift
-    else
-        local pf=""
-    fi
-    ssh "${env}-${host}.${env}.gneis.io" $pf $@
-}
-
-# Pass
-function pass4idrsa() {
-    local env=$1
-    local t=${2:-internal}
-    pass "ck/keys/${env}_id_rsa_${t}/pass" | pbcopy
-}
-
-function add-gneis-key() {
-    local env="$1"
-    local type="${2:-internal}"
-    local key_path="$HOME/.ssh/$env-$type"
-
-    local phrase=$(pass "ck/keys/${env}_id_rsa_${type}/pass")
-
-    expect <<EOF
-        spawn ssh-add $key_path
-        expect "Enter passphrase for $key_path:"
-        send "$phrase\r"
-        interact
-EOF
-}
 
 # AWS
 function awsenv() {
